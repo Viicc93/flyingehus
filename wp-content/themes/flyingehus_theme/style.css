@@ -1,0 +1,13 @@
+/*
+Theme Name: Flyingehus Theme
+Theme URI:
+Author: Victoria Johansson
+Author URI:
+Description: Theme for Flyingehus with Bootstrap.
+Version: 0.1
+Text Domain: flyingehus
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }

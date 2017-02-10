@@ -1,0 +1,20 @@
+/*
+Theme Name: Flyingehus Theme
+Theme URI:
+Author: Victoria Johansson
+Author URI:
+Description: Theme for Flyingehus with Bootstrap.
+Version: 0.1
+Text Domain: flyingehus
+*/
+
+@import "include/variables";
+@import "include/mixins";
+@import "include/typography";
+@import "include/base";
+@import "include/header";
+@import "include/navigation";
+@import "include/page";
+@import "include/post";
+@import "include/sidebar";
+@import "include/footer";
