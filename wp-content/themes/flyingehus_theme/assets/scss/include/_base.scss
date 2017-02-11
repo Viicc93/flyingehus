@@ -2,4 +2,22 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: Arial !important;
+	color: $color;
+}
+body {
+	background: $backround-color;
+}
+.flyingehus-container {
+	max-width: 1280px;
+	margin: auto;
+	padding: $space-xxs;
+}
+@media all and (min-width: $screen-xs) {
+}
+
+@media all and (min-width: $screen-sm) {
+	.flyingehus-container {
+		padding: $space-sm;
+	}
 }
