@@ -7,7 +7,190 @@ Description: Theme for Flyingehus with Bootstrap.
 Version: 0.1
 Text Domain: flyingehus
 */
+/*
+* TEXT
+*/
+/*
+* MARGIN PADDING
+*/
+/*
+*  BREAKPOINTS
+*/
+p {
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 18px; }
+
+a {
+  color: #900;
+  text-decoration: none; }
+  a:hover {
+    color: #83B;
+    text-decoration: none; }
+
+@media all and (min-width: 460px) {
+  p {
+    font-size: 15px; }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 20px; } }
+
+@media all and (min-width: 710px) {
+  p {
+    font-size: 16px; }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 26px; } }
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: Arial !important;
+  color: #000080; }
+
+body {
+  background: #FEF6AF; }
+
+.flyingehus-container {
+  max-width: 1280px;
+  margin: auto;
+  padding: 5px; }
+
+@media all and (min-width: 710px) {
+  .flyingehus-container {
+    padding: 20px; } }
+
+.navbar.navbar-default {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #000;
+  border-radius: 0;
+  min-height: 0px; }
+
+.navbar-default .navbar-toggle {
+  background: transparent;
+  border: none; }
+  .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:active, .navbar-default .navbar-toggle:focus {
+    background: transparent;
+    border: none; }
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #000; }
+
+.navbar-default .navbar-collapse {
+  border-top: none; }
+
+#primarynav li a {
+  color: #000;
+  font-weight: bold;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 14px; }
+
+#logo {
+  width: 150px; }
+  #logo img {
+    width: 100%; }
+
+@media all and (min-width: 710px) {
+  #primarynav {
+    margin-top: 20px; }
+  #logo {
+    width: 200px; } }
+
+@media all and (min-width: 990px) {
+  #logo {
+    width: 250px; } }
+
+.post {
+  border-bottom: 1px dotted rgba(0, 0, 128, 0.3);
+  padding: 20px 0; }
+
+.hero-post {
+  border-bottom: 1px dotted rgba(0, 0, 128, 0.3);
+  padding: 20px 0; }
+
+.post-title {
+  font-size: 16px;
+  font-weight: bold; }
+  .post-title a {
+    color: #000080; }
+    .post-title a:hover {
+      color: #83B; }
+
+.content p {
+  font-size: 14px; }
+
+.post .post-img {
+  overflow: hidden; }
+  .post .post-img img {
+    height: 100%; }
+
+.hero-post {
+  overflow: hidden; }
+  .hero-post .hero-img {
+    overflow: hidden; }
+    .hero-post .hero-img img {
+      height: 100%; }
+
+.single-img {
+  margin: auto; }
+  .single-img.horizontal-image img {
+    width: 100%;
+    max-width: 640px; }
+  .single-img.vertical-image img {
+    width: 100%;
+    max-width: 280px; }
+
+.post-categories {
+  display: inline; }
+  .post-categories li {
+    display: inline; }
+
+.post-date {
+  margin: 3px 0;
+  color: #777;
+  font-size: 14px;
+  font-weight: lighter;
+  font-style: italic; }
+
+.read-more {
+  color: #900;
+  float: right;
+  padding-bottom: 5px;
+  padding-right: 5px; }
+
+@media all and (min-width: 560px) {
+  .post {
+    overflow: hidden;
+    clear: both;
+    margin-bottom: 10px; }
+    .post .post-img {
+      width: 30%;
+      float: left; }
+    .post .post-title {
+      margin-top: 0px; }
+    .post .content {
+      width: 70%;
+      float: left;
+      padding-left: 10px; } }
+
+@media all and (min-width: 710px) {
+  .post-title {
+    font-size: 20px; } }
+
+@media all and (min-width: 990px) {
+  .full-post .post-title {
+    font-size: 26px; } }
+
+.flyingehus-footer {
+  width: 100%; }
+
+.copyright {
+  text-align: center;
+  background-color: #000; }
+  .copyright p {
+    color: #fff;
+    padding: 10px;
+    font-weight: lighter;
+    font-style: italic; }

@@ -1,8 +1,9 @@
+</div><!-- END clearfix-->
 <footer class="flyingehus-footer">
 </footer>
 <div class="copyright">
-  <p><i> &copy; Copyright Flyingehus 2017</i></p>
+  <p> &copy; Copyright Flyingehus 2017</p>
 </div>
-</div>
+</div><!--END container-->
 </body>
 </html>

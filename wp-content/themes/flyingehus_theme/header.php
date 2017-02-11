@@ -7,9 +7,11 @@
 </head>
 
 <body <?php body_class(); ?>>
+  <div class="flyingehus-container">
   <header>
-  <!--<div id="logo" style="background-image: url('<?php bloginfo('url'); ?>/wp-content/themes/fso_eventing_theme/img/logo.jpg');"></div>-->
-  <div class="info"></div>
+    <div id="logo">
+      <a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('url'); ?>/wp-content/themes/flyingehus_theme/assets/images/logo_flyingehus.png"/></a>
+    </div>
     <nav class="navbar navbar-default" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
@@ -19,7 +21,6 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="<?php bloginfo('url')?>"><img src="" alt=""></a>
           </div>
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -37,3 +38,4 @@
           </div>
     </nav>
   </header>
+  <div class="clearfix">

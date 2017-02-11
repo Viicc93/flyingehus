@@ -2,20 +2,32 @@
 
 <?php $i = 0; ?>
 
-<div class="container flexbox">
-	<section class="posts flexpos-1 col-xs-12 col-sm-12 col-md-8 col-lg-8">
+<div class="flexbox">
+	<aside id="news-sidebar" class="sidebar flexpos-2 col-xs-12 col-md-3">
+		<?php if ( is_active_sidebar( 'main-sidebar' ) ) : ?>
+					<?php dynamic_sidebar( 'main-sidebar' ); ?>
+		<?php endif; ?>
+	</aside>
+
+	<section class="posts flexpos-1 col-xs-12 col-md-9">
 	<?php if ( have_posts() ) : ?>
 		<?php	while ( have_posts() ) : the_post(); ?>
 			<?php if ($i === 0 ): ?>
 
 				<article class="hero-post h-entry">
 					<div class="hero-img">
-						<?php the_post_thumbnail();?>
+						<img class="u-photo" src="<?php the_post_thumbnail_url(); ?>"></img>
 					</div>
 					<div class="content">
 						<h2 class ="post-title p-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-						<p class="post-date">Posted at: <?php the_date(); ?></p>
+						<div>
+							<span class="post-date">Posted at: <?php the_date(); ?></span>
+						</div>
 						<div class="p-summary"><?php the_content(); ?></div>
+						<span class="categories"><?php the_category(); ?></span>
+						<div class="exc-footer">
+							<a class="read-more" href="<?php the_permalink(); ?>">Read More &raquo;</a>
+						</div>
 					</div>
 				</article>
 
@@ -24,9 +36,7 @@
 				<article class="post h-entry">
 					<?php if ( has_post_thumbnail() ) : ?>
 						<div class="post-img">
-							<div class="img">
-								<img class="u-photo" src="<?php the_post_thumbnail_url(); ?>"></img>
-							</div>
+							<img class="u-photo" src="<?php the_post_thumbnail_url(); ?>"></img>
 						</div>
 						<div class="content">
 					<?php else: ?>
@@ -35,6 +45,7 @@
 						<h2 class ="post-title p-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 						<p class="post-date">Posted at: <?php the_date(); ?></p>
 						<div class="p-summary"><?php the_excerpt(); ?></div>
+						<span class="categories"><?php the_category(); ?></span>
 						<div class="exc-footer">
 							<a class="read-more" href="<?php the_permalink(); ?>">Read More &raquo;</a>
 						</div>
@@ -49,19 +60,6 @@
 			</div>
 		<?php endif; ?>
 	</section>
-
-	<aside id="news-sidebar" class="sidebar flexpos-2 col-xs-12 col-sm-12 col-md-4 col-lg-4">
-		<?php if ( is_active_sidebar( 'news-sidebar' ) ) : ?>
-			<header class="sidebar-header">
-				<h1 class="sidebar-title">NEWS</h1>
-			</header>
-			<div class="sidebar-content">
-				<ul class="c widget-area" role="complementary">
-					<?php dynamic_sidebar( 'news-sidebar' ); ?>
-				</ul>
-			</div>
-		<?php endif; ?>
-	</aside>
 </div>
 
 <?php get_footer(); ?>
