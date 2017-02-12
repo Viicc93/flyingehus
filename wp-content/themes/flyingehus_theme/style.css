@@ -98,10 +98,6 @@ body {
   #logo {
     width: 200px; } }
 
-@media all and (min-width: 990px) {
-  #logo {
-    width: 250px; } }
-
 .post {
   border-bottom: 1px dotted rgba(0, 0, 128, 0.3);
   padding: 20px 0; }
@@ -182,6 +178,94 @@ body {
 @media all and (min-width: 990px) {
   .full-post .post-title {
     font-size: 26px; } }
+
+.sidebar ul li {
+  list-style-type: none; }
+
+.widget-title {
+  font-size: 18px; }
+
+@media all and (min-width: 710px) {
+  .widget-title {
+    font-size: 20px; } }
+
+.flyingehus-calendar {
+  margin-top: 20px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 80, 0.2);
+  border-radius: 3px;
+  padding-bottom: 20px; }
+
+.flyingehus-bokning {
+  padding-bottom: 20px; }
+
+.flyingehus-calendar .calendar-title {
+  text-align: center; }
+
+.fhc-label {
+  text-align: center;
+  border-bottom: 2px solid #000080;
+  color: #000080;
+  height: 20px; }
+
+h5.fhc-month {
+  color: #000080;
+  font-size: 17px; }
+
+.fhc-header {
+  display: inline-block;
+  height: 40px;
+  width: 100%; }
+
+.fhc-content {
+  padding: 0 10px;
+  overflow: hidden; }
+
+.fhc-content p {
+  font-size: 14px; }
+
+.fhc-date {
+  float: left;
+  padding-right: 5px;
+  width: 43px; }
+
+.fhc-date h5 {
+  color: #000080;
+  font-weight: bold; }
+
+.fhc-title {
+  padding: 0; }
+
+.fhc-title h5 a {
+  color: #000080; }
+
+.fhc-title h5 a:hover {
+  color: #7D0000; }
+
+.fhc-description {
+  color: #000080; }
+
+.fhc-description p {
+  margin-left: 42px;
+  margin-top: 2px;
+  margin-bottom: 3px; }
+
+.fhc-place {
+  padding: 1px 5px 1px 1px;
+  font-size: 12px; }
+
+.fhc-place a {
+  color: #000080;
+  margin-left: 44px; }
+
+.fhc-place a:hover {
+  color: #7D0000; }
+
+.fhc-place .fa.fa-map-marker {
+  padding-right: 4px; }
+
+.flyingehus-empty-calendar {
+  padding-left: 10px; }
 
 .flyingehus-footer {
   width: 100%; }

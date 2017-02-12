@@ -1,0 +1,15 @@
+.sidebar {
+  ul {
+    li {
+      list-style-type: none;
+    }
+  }
+}
+.widget-title {
+  font-size: $heading-sm;
+}
+@media all and (min-width: $screen-sm) {
+  .widget-title {
+    font-size: $heading-md;
+  }
+}

@@ -34,7 +34,9 @@
 </div>
   <aside id="news-sidebar" class="sidebar col-xs-12 col-md-3">
   	<?php if ( is_active_sidebar( 'news-sidebar' ) ) : ?>
-  				<?php dynamic_sidebar( 'news-sidebar' ); ?>
+			<ul>
+  			<?php dynamic_sidebar( 'news-sidebar' ); ?>
+			</ul>
   	<?php endif; ?>
 	</aside>
 

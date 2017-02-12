@@ -173,6 +173,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/assets\/scss\/include\/_calendar.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/_calendar.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/assets\/scss\/include\/_footer.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -319,6 +332,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/header.php",
+		"oF": 0
+		},
+	"\/include\/flyingehus-calendar.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/include\/flyingehus-calendar.php",
 		"oF": 0
 		},
 	"\/include\/wp_bootstrap_navwalker.php": {

@@ -5,7 +5,9 @@
 <div class="flexbox">
 	<aside id="news-sidebar" class="sidebar flexpos-2 col-xs-12 col-md-3">
 		<?php if ( is_active_sidebar( 'main-sidebar' ) ) : ?>
-					<?php dynamic_sidebar( 'main-sidebar' ); ?>
+			<ul>
+				<?php dynamic_sidebar( 'main-sidebar' ); ?>
+			</ul>
 		<?php endif; ?>
 	</aside>
 

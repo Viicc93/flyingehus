@@ -1,5 +1,6 @@
 <?php
 require_once('include/wp_bootstrap_navwalker.php');
+include 'include/flyingehus-calendar.php';
 
 function flyingehus_enqueue_scripts() {
   // Enqueue Scripts
