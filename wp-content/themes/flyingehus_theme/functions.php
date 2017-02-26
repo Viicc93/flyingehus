@@ -30,10 +30,6 @@ function flyingehus_setup() {
   }
 add_action( 'after_setup_theme', 'flyingehus_setup' );
 
-if (function_exists('add_theme_support')) {
-  add_theme_support('post-thumbnails');
-}
-
 function wpdocs_custom_excerpt_length( $length ) {
     return 40;
 }
@@ -64,6 +60,12 @@ function flyingehus_widgets_init() {
 }
 add_action( 'widgets_init', 'flyingehus_widgets_init' );
 
+// Enable shortcodes in text widgets
+add_filter('widget_text','do_shortcode');
+
+if (function_exists('add_theme_support')) {
+  add_theme_support('post-thumbnails');
+}
 /*
  * Hide WP Version
  */
