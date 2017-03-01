@@ -1,5 +1,4 @@
 $(document).ready(function(){
-	$('#primarynav').addClass('nav navbar-nav');
 
 	$(window).on( 'resize', function () {
 			$('.post-img').height( $('.post-img').width() / 1.5 );

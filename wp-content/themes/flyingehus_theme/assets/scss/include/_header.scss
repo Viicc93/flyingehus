@@ -3,8 +3,7 @@
   border: none;
   border-bottom: 2px solid #000;
   border-radius: 0;
-  min-height: 0px;
-
+  min-height: 0px
 }
 .navbar-default .navbar-toggle {
   background: transparent;
@@ -18,14 +17,25 @@
  }
 }
 .navbar-default .navbar-collapse {
-  border-top: none;
+  border-color:  #000;
+  border-width: 2px;
+}
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+  background-color: transparent;
+}
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:focus,
+.navbar-default .navbar-nav>.open>a:hover {
+  background-color: transparent;
 }
 #primarynav {
   li {
     a {
       color: #000;
       font-weight: bold;
-      padding: 0;
+      padding: 0 $space-xs;
       text-transform: uppercase;
       font-size: 14px;
     }
@@ -44,6 +54,9 @@
   }
   #logo {
     width: 200px;
+  }
+  .dropdown-menu {
+    background-color: $transparent-background-color;
   }
 }
 
