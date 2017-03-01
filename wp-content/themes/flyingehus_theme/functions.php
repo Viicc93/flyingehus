@@ -14,14 +14,13 @@ function flyingehus_enqueue_scripts() {
 
   //Enqueue Styles
   wp_enqueue_style('bootstrap', get_stylesheet_directory_uri() . '/assets/bootstrap/css/bootstrap.min.css');
-  wp_enqueue_style('fontawesome_css', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+  //wp_enqueue_style('fontawesome', get_stylesheet_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css');
   wp_enqueue_style('style', get_stylesheet_uri());
 }
 add_action( 'wp_enqueue_scripts', 'flyingehus_enqueue_scripts' );
 
 function flyingehus_setup() {
-  // Adds RSS feed links to <head> for posts and comments.
-  add_theme_support( 'automatic-feed-links' );
+
   // Register navigation menu
   register_nav_menu( 'primarymenu', __( 'Primary Menu', 'flyingehus' ) );
   // Disable standard wordpress intern gallery style (inline)

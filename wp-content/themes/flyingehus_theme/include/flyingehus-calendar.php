@@ -38,7 +38,7 @@ add_action( 'init', 'create_calendar_tax' );
   		'typ' => 'no type',
   	), $atts, 'kalender' );
     $type = $atts['typ'];
-    $months = array('januari' => 'januari', 
+    $months = array('januari' => 'januari',
                     'februari' => 'februari',
                     'mars' => 'mars',
                     'april' => 'april',
@@ -87,10 +87,10 @@ add_action( 'init', 'create_calendar_tax' );
                     $fhcHTML .="</h5></div></div><div class=\"fhc-body\"><div class=\"fhc-description\"><p>$desc</p></div></div>
                                 <div class=\"fhc-place\">";
                     if (!empty($maps)) {
-                      $fhcHTML .="<a target=\"_blank\" href=\"$maps\"><p><span class=\"glyphicon glyphicon-map-marker\" aria-hidden=\"true\"></span>$place</p></a>";
+                      $fhcHTML .="<a target=\"_blank\" href=\"$maps\"><span class=\"glyphicon glyphicon-map-marker\" aria-hidden=\"true\"></span>$place</a>";
                     }
                     else {
-                      $fhcHTML .="<p><span class=\"glyphicon glyphicon-map-marker\" aria-hidden=\"true\"></span>$place</p>";
+                      $fhcHTML .="<p><span class=\"fa fa-times\" aria-hidden=\"true\"></span>$place</p>";
                     }
                     $fhcHTML .="</div></div>";
                   }
@@ -111,7 +111,7 @@ add_action( 'init', 'create_calendar_tax' );
                 'field' => 'slug', //can be set to ID
                 'terms' => $type //if field is ID you can reference by cat/term number
               )
-            ), 'meta_key'=>'k_start',  'orderby' => 'meta_key', 'order' => ASC,'meta_query' => array(array('key'  => 'k_month','value' => $month, 'compare'   => 'LIKE')));
+            ), 'meta_key'=>'k_start',  'orderby' => 'meta_key', 'order' => 'ASC','meta_query' => array(array('key'  => 'k_month','value' => $month, 'compare'   => 'LIKE')));
             return $args;
         }
   add_shortcode( 'kalender', 'build_calendar' );

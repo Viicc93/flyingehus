@@ -14,7 +14,7 @@
 				?>
 			<?php endif; ?>
 
-			<button class="flyingehus-button" value="" onclick="history.back(-1)" /><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+			<button class="flyingehus-button" value="" onclick="history.back(-1)" /><span class="fa fa-arrow-left" aria-hidden="true"></span></button>
 				<article class="h-entry full-post">
 				<?php if (has_post_thumbnail()): ?>
 					<div class="single-img <?php echo  $image_size; ?>">
