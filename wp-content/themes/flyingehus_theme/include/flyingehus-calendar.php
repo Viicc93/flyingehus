@@ -38,7 +38,19 @@ add_action( 'init', 'create_calendar_tax' );
   		'typ' => 'no type',
   	), $atts, 'kalender' );
     $type = $atts['typ'];
-    $months = array('januari' => 'januari', 'februari' => 'februari','mars' => 'mars',/*,'April' => 'april','Maj' => 'maj','Juni' => 'juni','Juli' => 'juli','Augusti' => 'augusti','September' => 'september','Oktober' => 'oktober','November' => 'november','December' => 'december',*/);
+    $months = array('januari' => 'januari', 
+                    'februari' => 'februari',
+                    'mars' => 'mars',
+                    'april' => 'april',
+                    'maj' => 'maj',
+                    'juni' => 'juni',
+                    'juli' => 'juli',
+                    'augusti' => 'augusti',
+                    'september' => 'september',
+                    'oktober' => 'oktober',
+                    'november' => 'november',
+                    'december' => 'december',
+                  );
     $check = new WP_Query( array('post_type' => 'flyingehus-calendar'));
 
         if ($check->have_posts()) {
@@ -72,20 +84,20 @@ add_action( 'init', 'create_calendar_tax' );
                     else {
                     $fhcHTML .=$title;
                     }
-                    $fhcHTML .="</h5></div></div><div class=\"fhc-body\"><div class=\"fhc-description\"><p>$desc</p></div></div></div>
+                    $fhcHTML .="</h5></div></div><div class=\"fhc-body\"><div class=\"fhc-description\"><p>$desc</p></div></div>
                                 <div class=\"fhc-place\">";
                     if (!empty($maps)) {
-                      $fhcHTML .="<a target=\"_blank\" href=\"$maps\"><em><span class=\"fa fa-map-marker\" aria-hidden=\"true\"></span>$place</em></a>";
+                      $fhcHTML .="<a target=\"_blank\" href=\"$maps\"><p><span class=\"glyphicon glyphicon-map-marker\" aria-hidden=\"true\"></span>$place</p></a>";
                     }
                     else {
-                      $fhcHTML .="<em><span class=\"fa fa-map-marker\" aria-hidden=\"true\"></span>$place</em>";
+                      $fhcHTML .="<p><span class=\"glyphicon glyphicon-map-marker\" aria-hidden=\"true\"></span>$place</p>";
                     }
-                    $fhcHTML .="</div>";
+                    $fhcHTML .="</div></div>";
                   }
                 }
             }
         } else {
-                $fhbHTML .= '<p class="flyingehus-empty-calendar">Inga bokningar för tillfället...</p>';
+                $fhbHTML .= '<p class="flyingehus-empty-calendar">Kalendern är för tillfället tom...</p>';
         }
         $fhcHTML .= "</div>";
         return $fhcHTML;

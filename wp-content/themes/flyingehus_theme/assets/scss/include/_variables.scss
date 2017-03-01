@@ -1,5 +1,5 @@
 $backround-color: #FEF6AF;
-
+$transparent-background-color: rgba(254, 246, 175, 0.5);
 /*
 * TEXT
 */
@@ -30,6 +30,6 @@ $space-lg: 50px;
 *  BREAKPOINTS
 */
 $screen-xs: 460px;
-$screen-sm: 710px;
+$screen-sm: 768px;
 $screen-md: 990px;
 $screen-lg: 1280px;
