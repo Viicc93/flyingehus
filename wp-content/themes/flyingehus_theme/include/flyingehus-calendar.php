@@ -51,10 +51,50 @@ add_action( 'init', 'create_calendar_tax' );
                     'november' => 'november',
                     'december' => 'december',
                   );
-    $check = new WP_Query( array('post_type' => 'flyingehus-calendar'));
-
+    $check = new WP_Query( array('post_type' => 'flyingehus-calendar',
+                  'tax_query' => array(
+                  array(
+                    'taxonomy' => 'caltypes',
+                    'field' => 'slug', //can be set to ID
+                    'terms' => $type //if field is ID you can reference by cat/term number
+                  )
+                ) ));
+      if ( $type == "terrangbana-bokad" || $type == "ridhus-bokat" ) {
+        $fhcHTML = "<div class=\"flyingehus-calendar \"><h3  class=\"calendar-title\">BOKNINGAR</h3>";
         if ($check->have_posts()) {
-          $fhcHTML = "<div class=\"flyingehus-calendar \"><h3  class=\"calendar-title\">KALENDER</h3>";
+            foreach ($months as $month) {
+                $label = strtoupper($month);
+                $key = new WP_Query( kArgs($type, $month));
+
+                if( $key->have_posts() ) {
+                   $fhcHTML .="<div class=\"fhc-label\"><h5 class=\"fhc-month\">$label</h5></div>";
+                  while( $key->have_posts() ) {
+                    $key->the_post();
+                    $date = get_field( "k_start");
+                    $dateEnd = get_field( "k_end");
+                    $desc = get_field( "k_desc");
+                    $time = get_field( "k_time");
+                    $title = get_the_title();
+                    $sep = '-';
+
+                    if ($dateEnd == 0) {
+                        $dateEnd = ' ';
+                        $sep = ' ';
+                    }
+                    $fhcHTML .="<div class='fhc-content'><div class=\"fhc-header\"> <div class=\"fhc-date\"><h5>$date$sep$dateEnd</h5></div>";
+                    $fhcHTML .="<div class=\"fhc-title\"><h5>$title</h5></div></div><div class=\"fhc-body\"><div class=\"fhc-description\"><p>$desc</p><p><span class=\"fa fa-clock-o\"></span>$time</p></div></div></div>";
+                  }
+                }
+            }
+        } else {
+                $fhcHTML .= '<p class="flyingehus-empty-calendar">Inga bokningar för tillfället..</p>';
+        }
+        $fhcHTML .= "</div>";
+        return $fhcHTML;
+      }
+      else {
+        $fhcHTML = "<div class=\"flyingehus-calendar \"><h3  class=\"calendar-title\">KALENDER</h3>";
+        if ($check->have_posts()) {
             foreach ($months as $month) {
                 $label = strtoupper($month);
                 $key = new WP_Query( kArgs($type, $month));
@@ -87,20 +127,21 @@ add_action( 'init', 'create_calendar_tax' );
                     $fhcHTML .="</h5></div></div><div class=\"fhc-body\"><div class=\"fhc-description\"><p>$desc</p></div></div>
                                 <div class=\"fhc-place\">";
                     if (!empty($maps)) {
-                      $fhcHTML .="<a target=\"_blank\" href=\"$maps\"><span class=\"glyphicon glyphicon-map-marker\" aria-hidden=\"true\"></span>$place</a>";
+                      $fhcHTML .="<a target=\"_blank\" href=\"$maps\"><span class=\"fa fa-map-marker\" aria-hidden=\"true\"></span>$place</a>";
                     }
                     else {
-                      $fhcHTML .="<p><span class=\"fa fa-times\" aria-hidden=\"true\"></span>$place</p>";
+                      $fhcHTML .="<p><span class=\"fa fa-map-marker\" aria-hidden=\"true\"></span>$place</p>";
                     }
                     $fhcHTML .="</div></div>";
                   }
                 }
             }
         } else {
-                $fhbHTML .= '<p class="flyingehus-empty-calendar">Kalendern är för tillfället tom...</p>';
+                $fhcHTML .= '<p class="flyingehus-empty-calendar">Kalendern är för tillfället tom...</p>';
         }
         $fhcHTML .= "</div>";
         return $fhcHTML;
+      }
     }
 
     function kArgs($type, $month){

@@ -17,11 +17,13 @@ Text Domain: flyingehus
 *  BREAKPOINTS
 */
 p {
+  color: #00006A;
   font-size: 14px;
-  font-family: 'Roboto', sans-serif; }
+  font-family: Arial, Helvetica, sans-serif !important; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-size: 18px; }
+  color: #00006A;
+  font-family: Arial, Helvetica, sans-serif !important; }
 
 a {
   color: #900;
@@ -30,26 +32,65 @@ a {
     color: #83B;
     text-decoration: none; }
 
+h1 {
+  font-size: 18px; }
+
+h2 {
+  font-size: 16px; }
+
+h3 {
+  font-size: 14px; }
+
+h4 {
+  font-size: 12px; }
+
+h5 {
+  font-size: 11px; }
+
+h6 {
+  font-size: 10px; }
+
 @media all and (min-width: 460px) {
   p {
-    font-size: 15px; }
-  h1, h2, h3, h4, h5, h6 {
-    font-size: 20px; } }
+    font-size: 15px; } }
 
 @media all and (min-width: 768px) {
   p {
     font-size: 16px; }
-  h1, h2, h3, h4, h5, h6 {
-    font-size: 26px; } }
+  h1 {
+    font-size: 24px; }
+  h2 {
+    font-size: 20px; }
+  h3 {
+    font-size: 18px; }
+  h4 {
+    font-size: 16px; }
+  h5 {
+    font-size: 14px; }
+  h6 {
+    font-size: 12px; } }
+
+@media all and (min-width: 990px) {
+  h1 {
+    font-size: 36px; }
+  h2 {
+    font-size: 26px; }
+  h3 {
+    font-size: 22px; }
+  h4 {
+    font-size: 20px; }
+  h5 {
+    font-size: 18px; }
+  h6 {
+    font-size: 16px; } }
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  color: #000080; }
+  box-sizing: border-box; }
 
 body {
-  background: #FEF6AF; }
+  background: #FDF5B7; }
 
 .flyingehus-container {
   max-width: 1280px;
@@ -97,25 +138,41 @@ body {
 
 #primarynav li a {
   color: #000;
-  font-weight: bold;
-  padding: 0 10px;
+  padding: 0 20px 0 0;
   text-transform: uppercase;
-  font-size: 14px; }
+  font-size: 10px; }
 
 #logo {
   width: 150px; }
   #logo img {
     width: 100%; }
 
+.navbar-header {
+  margin-top: -50px; }
+
+@media all and (min-width: 460px) {
+  #primarynav li a {
+    font-size: 14px; } }
+
 @media all and (min-width: 768px) {
   #primarynav {
-    margin-top: 20px; }
+    margin-top: 10px; }
   #logo {
     width: 200px; }
   .dropdown-menu {
-    background-color: rgba(254, 246, 175, 0.5); } }
+    padding-left: 5px;
+    background-color: rgba(253, 245, 183, 0.5); }
+  .navbar-collapse {
+    padding-right: 0;
+    padding-left: 0; } }
 
-@media all and (max-width: 768px) {
+@media all and (min-width: 1280px) {
+  #primarynav li a {
+    font-size: 16px; } }
+
+@media all and (max-width: 767px) {
+  #primarynav li.menu-item li.menu-item a {
+    color: #777; }
   li.menu-item a {
     padding: 5px; }
   li.menu-item .caret {
@@ -144,6 +201,32 @@ body {
   padding-left: 15px;
   padding-right: 15px; }
 
+@media all and (max-width: 990px) {
+  #news-sidebar, .posts {
+    width: 100%; }
+  .flexbox {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap; }
+  .flexpos-2 {
+    order: 2;
+    -webkit-order: 2;
+    -moz-order: 2;
+    -ms-order: 2;
+    width: 100%;
+    float: none; }
+  .flexpos-1 {
+    order: 1;
+    -webkit-order: 1;
+    -moz-order: 1;
+    -ms-order: 1; } }
+
 .post {
   border-bottom: 1px dotted rgba(0, 0, 128, 0.3);
   padding: 20px 0; }
@@ -153,10 +236,9 @@ body {
   padding: 20px 0; }
 
 .post-title {
-  font-size: 16px;
   font-weight: bold; }
   .post-title a {
-    color: #000080; }
+    color: #00006A; }
     .post-title a:hover {
       color: #83B; }
 
@@ -217,14 +299,6 @@ body {
       float: left;
       padding-left: 10px; } }
 
-@media all and (min-width: 768px) {
-  .post-title {
-    font-size: 20px; } }
-
-@media all and (min-width: 990px) {
-  .full-post .post-title {
-    font-size: 26px; } }
-
 .sidebar ul li {
   list-style-type: none; }
 
@@ -241,12 +315,8 @@ body {
   border: 1px solid rgba(0, 0, 80, 0.2);
   border-radius: 3px;
   padding-bottom: 20px; }
-
-.flyingehus-bokning {
-  padding-bottom: 20px; }
-
-.flyingehus-calendar .calendar-title {
-  text-align: center; }
+  .flyingehus-calendar .calendar-title {
+    text-align: center; }
 
 .fhc-label {
   text-align: center;
@@ -291,33 +361,33 @@ h5.fhc-month {
 
 .fhc-title h5 a {
   color: #900; }
-
-.fhc-title h5 a:hover {
-  color: #7D0000; }
+  .fhc-title h5 a:hover {
+    color: #7D0000; }
 
 .fhc-description {
   color: #000080; }
+  .fhc-description p {
+    margin-left: 42px;
+    margin-top: 2px;
+    margin-bottom: 2px; }
 
-.fhc-description p {
-  margin-left: 42px;
-  margin-top: 2px;
-  margin-bottom: 2px; }
-
-.fhc-place p, .fhc-place a {
+.fhc-place a, .fhc-place p {
   color: #7B50A7;
   padding: 1px 5px 1px 1px;
   font-size: 12px;
   font-style: italic;
   font-weight: 100; }
 
-.fhc-place a {
-  color: #7B50A7; }
-
 .fhc-place a:hover {
   color: #7D0000; }
 
 .fhc-place .fa.fa-map-marker {
-  padding-right: 4px; }
+  color: #7B50A7;
+  padding-right: 5px; }
+
+.fa.fa-clock-o {
+  padding-right: 5px;
+  color: #777; }
 
 .flyingehus-empty-calendar {
   padding-left: 10px; }

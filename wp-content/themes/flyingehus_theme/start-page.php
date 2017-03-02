@@ -8,7 +8,7 @@
 <?php $latestPost = new WP_Query( array('post_type' => 'post','posts_per_page' => 1)); ?>
 <?php $latestPostID; ?>
 <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
-<?php $posts = new WP_Query( array('post_type' => 'post', 'paged' => $paged, 'posts_per_page' => 3)); ?>
+<?php $posts = new WP_Query( array('post_type' => 'post', 'paged' => $paged, 'posts_per_page' => 5)); ?>
 <?php
   if ($latestPost->have_posts()):
     while ( $latestPost->have_posts() ) : $latestPost->the_post();

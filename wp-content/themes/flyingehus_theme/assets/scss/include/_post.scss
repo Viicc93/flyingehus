@@ -7,7 +7,6 @@
   padding: $space-sm 0;
 }
 .post-title {
-  font-size: $heading-xs;
   font-weight: bold;
   a {
     color: $color;
@@ -98,18 +97,6 @@
       width: 70%;
       float: left;
       padding-left: 10px;
-    }
-  }
-}
-@media all and (min-width: $screen-sm) {
-  .post-title {
-    font-size: $heading-md;
-  }
-}
-@media all and (min-width: $screen-md) {
-  .full-post {
-    .post-title {
-      font-size: $heading-lg;
     }
   }
 }
