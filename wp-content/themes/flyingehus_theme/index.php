@@ -1,12 +1,5 @@
 <?php get_header(); ?>
 <div class="flexbox">
-	<aside id="news-sidebar" class="sidebar flexpos-2 col-xs-12 col-md-3">
-		<?php if ( is_active_sidebar( 'main-sidebar' ) ) : ?>
-			<ul>
-				<?php dynamic_sidebar( 'main-sidebar' ); ?>
-			</ul>
-		<?php endif; ?>
-	</aside>
 
 	<section class="posts flexpos-1 col-xs-12 col-md-9">
 	<?php if ( have_posts() ) : ?>
@@ -43,6 +36,13 @@
 			</div>
 		<?php endif; ?>
 	</section>
+	<aside id="news-sidebar" class="sidebar flexpos-2 col-xs-12 col-md-3">
+		<?php if ( is_active_sidebar( 'news-sidebar' ) ) : ?>
+			<ul>
+				<?php dynamic_sidebar( 'news-sidebar' ); ?>
+			</ul>
+		<?php endif; ?>
+	</aside>
 </div>
 
 <?php get_footer(); ?>

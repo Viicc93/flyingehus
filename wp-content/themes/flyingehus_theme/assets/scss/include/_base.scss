@@ -4,12 +4,22 @@
 	box-sizing: border-box;
 }
 body {
-	background: $backround-color;
+	background: $background-color;
 }
 .flyingehus-container {
 	max-width: 1280px;
 	margin: auto;
 	padding: $space-xxs;
+}
+.flyingehus-button {
+    padding: 5px 20px;
+    margin-bottom: 20px;
+		background-color: #FFF8BC;
+		border: 1px solid $color;
+		border-radius: 4px;
+		.fa-arrow-left {
+			color: $color;
+		}
 }
 @media all and (min-width: $screen-xs) {
 }

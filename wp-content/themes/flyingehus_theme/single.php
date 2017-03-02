@@ -19,6 +19,7 @@
 				<?php if (has_post_thumbnail()): ?>
 					<div class="single-img <?php echo  $image_size; ?>">
 						<img class="u-photo" src="<?php the_post_thumbnail_url(); ?>"></img>
+						<p class="image-text"><?php the_field('bildtext'); ?></p>
 					</div>
 				<?php endif; ?>
 					<h1 class="p-name post-title"><?php the_title(); ?></h1>

@@ -16,8 +16,8 @@
     endwhile;
   endif;
 ?>
-<div class="flexbox">
-	<aside id="news-sidebar" class="sidebar flexpos-2 col-xs-12 col-md-4">
+<div class="">
+	<aside id="main-sidebar" class="sidebar col-xs-12 col-md-4">
 		<?php if ( is_active_sidebar( 'main-sidebar' ) ) : ?>
 			<ul>
 				<?php dynamic_sidebar( 'main-sidebar' ); ?>
@@ -25,7 +25,7 @@
 		<?php endif; ?>
 	</aside>
 
-	<section class="posts flexpos-1 col-xs-12 col-md-8">
+	<section class="posts col-xs-12 col-md-8">
 	<?php if ( $posts->have_posts() ) : ?>
 		<?php	while ( $posts->have_posts() ) : $posts->the_post(); ?>
 			<?php if (get_the_ID() === $latestPostID ): ?>

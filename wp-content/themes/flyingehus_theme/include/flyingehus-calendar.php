@@ -156,3 +156,42 @@ add_action( 'init', 'create_calendar_tax' );
             return $args;
         }
   add_shortcode( 'kalender', 'build_calendar' );
+
+
+function calendar_table_head( $defaults ) {
+    unset($defaults['date']);
+    $defaults['desc_cal']  = 'Beskrivning';
+    $defaults['date_start']  = 'Datum';
+    $defaults['place_cal']  = 'Plats';
+    return $defaults;
+}
+add_filter('manage_flyingehus-calendar_posts_columns', 'calendar_table_head');
+
+
+function calendar_table_content( $column_name, $post_id ) {
+    if ($column_name == 'date_start') {
+      $start_date = get_post_meta( $post_id, 'k_start', true );
+      $end_date = get_post_meta( $post_id, 'k_end', true );
+      $month_date = get_post_meta( $post_id, 'k_month', true );
+
+      if ($end_date != 'null') {
+        $echo = $start_date .'-'. $end_date .' '. $month_date;
+      }
+      else {
+          $echo = $start_date .' '. $month_date;
+      }
+      echo $echo;
+    }
+
+    if ($column_name == 'desc_cal') {
+      $desc_cal = get_post_meta( $post_id, 'k_desc', true );
+
+      echo $desc_cal;
+    }
+    if ($column_name == 'place_cal') {
+      $place_cal = get_post_meta( $post_id, 'k_place', true );
+
+      echo $place_cal;
+    }
+}
+add_action( 'manage_flyingehus-calendar_posts_custom_column', 'calendar_table_content', 10, 2 );
