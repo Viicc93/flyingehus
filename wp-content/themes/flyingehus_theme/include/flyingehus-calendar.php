@@ -3,6 +3,7 @@
 function calendar_init() {
   $args = array(
     'label'=> 'Kalender',
+    'exclude_from_search' => true, 
     'public' => true,
     'show_ui' => true,
     'capability_type' => 'post',

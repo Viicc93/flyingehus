@@ -74,7 +74,9 @@ h5.fhc-month {
     padding: 1px 5px 1px 1px;
     font-size: 12px;
     font-style: italic;
-    font-weight: 100;
+  }
+  a {
+    text-decoration: underline;
   }
   a:hover {
     color: #7D0000;
