@@ -3,8 +3,7 @@
   border: none;
   border-bottom: 2px solid #000;
   border-radius: 0;
-  min-height: 0px;
-
+  min-height: 0px
 }
 .navbar-default .navbar-toggle {
   background: transparent;
@@ -18,16 +17,35 @@
  }
 }
 .navbar-default .navbar-collapse {
-  border-top: none;
+  border-color:  #000;
+  border-width: 2px;
+}
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+  background-color: transparent;
+}
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:focus,
+.navbar-default .navbar-nav>.open>a:hover {
+  background-color: transparent;
+}
+.navbar-default .navbar-nav>.dropdown>.dropdown-menu>li>a,
+.navbar-default .navbar-nav>.dropdown>.dropdown-menu>li>a:focus,
+.navbar-default .navbar-nav>.dropdown>.dropdown-menu>li>a:hover {
+  background-color: transparent;
 }
 #primarynav {
   li {
     a {
       color: #000;
-      font-weight: bold;
-      padding: 0;
+      //font-weight: bold;
+      padding: 0 $space-sm 0 0;
       text-transform: uppercase;
-      font-size: 14px;
+      font-size: 10px;
+      &:hover {
+        color: $link-color;
+      }
     }
   }
 }
@@ -37,16 +55,82 @@
     width: 100%;
   }
 }
-
+.navbar-header {
+  margin-top: -50px;
+}
+@media all and (min-width: $screen-xs) {
+  #primarynav {
+    li {
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+}
 @media all and (min-width: $screen-sm) {
   #primarynav {
-    margin-top: $space-sm;
+    margin-top: $space-xs;
   }
   #logo {
     width: 200px;
   }
+  .dropdown-menu {
+    padding-left: 5px;
+    background-color: #FFF8BC;
+  }
+  .navbar-collapse {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
-
+@media all and (min-width: $screen-lg) {
+  #primarynav {
+    li {
+      a {
+        font-size: 16px;
+      }
+    }
+  }
+}
 @media all and (min-width: $screen-md) {
 
+}
+@media all and ( max-width: 767px ){
+  #primarynav {
+    li.menu-item {
+      li.menu-item {
+        a {
+          color: #777;
+        }
+      }
+    }
+  }
+  li.menu-item {
+    a {
+      padding: 5px;
+    }
+    .caret{
+      display: none;
+    }
+  }
+  .dropdown-menu {
+    position: static;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    float: none;
+    min-width: 160px;
+    padding: 5px 10px;
+    margin: 2px 0 0;
+    font-size: 10px;
+    text-align: left;
+    list-style: none;
+    background-color: #FFF8BC;
+    border: none;
+    border: none;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
 }

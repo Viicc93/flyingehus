@@ -1,85 +1,94 @@
 .flyingehus-calendar {
-margin-top: 20px;
-background-color: #fff;;
-border: 1px solid rgba(0, 0, 80, 0.2);
-border-radius: 3px;
-padding-bottom: 20px;
+  margin-top: 20px;
+  background-color: #fff;;
+  border: 1px solid rgba(0, 0, 80, 0.2);
+  border-radius: 3px;
+  padding-bottom: 20px;
+  .calendar-title {
+    text-align: center;
+  }
 }
-.flyingehus-bokning{
-padding-bottom: 20px;
-}
-.flyingehus-calendar .calendar-title {
-text-align: center;
-}
-
 
 .fhc-label{
-text-align: center;
-border-bottom: 2px solid #000080;
-color: #000080;
-height: 20px;
+  text-align: center;
+  border-bottom: 2px solid #000080;
+  color: #000080;
+  height: 24px;
 }
 
 h5.fhc-month {
-color: #000080;
-font-size: 17px;
+  color: #000080;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .fhc-header{
-display: inline-block;
-height: 40px;
-width: 100%;
+  display: inline-block;
+  width: 100%;
 }
 .fhc-content{
-padding: 0 10px;
-overflow: hidden;
-
+  padding: 0 10px;
+  overflow: hidden;
 }
 .fhc-content p {
-font-size: 14px;
+  font-size: 14px;
 }
 
 .fhc-date{
-float: left;
-padding-right: 5px;
-  width: 43px;
+  float: left;
+  padding-right: 5px;
+  width: 45px;
 }
 .fhc-date h5 {
-color: #000080;
-font-weight: bold;
+  color: #900;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 0;
 }
-.fhc-title {
-padding: 0;
+.fhc-title h5 {
+  color: #900;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  margin-left: 45px;
 }
 .fhc-title h5 a{
-color: #000080;
+  color: #900;
+  &:hover {
+    color: #7D0000;
+  }
 }
-.fhc-title h5 a:hover {
-color: #7D0000;
-}
-
 .fhc-description{
-color: #000080;
-}
-.fhc-description p {
+  color: #000080;
+  p {
     margin-left: 42px;
     margin-top: 2px;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
+  }
 }
-.fhc-place {
-padding: 1px 5px 1px 1px;
-font-size: 12px;
-}
-.fhc-place a {
-color: #000080;
-margin-left: 44px;
-}
-.fhc-place a:hover {
-color: #7D0000;
 
+.fhc-place {
+  a, p {
+    color: #7B50A7;
+    padding: 1px 5px 1px 1px;
+    font-size: 12px;
+    font-style: italic;
+  }
+  a {
+    text-decoration: underline;
+  }
+  a:hover {
+    color: #7D0000;
+  }
+  .fa.fa-map-marker{
+    color: #7B50A7;
+    padding-right: 5px;
+  }
 }
-.fhc-place .fa.fa-map-marker{
-padding-right: 4px;
+.fa.fa-clock-o {
+  padding-right: 5px;
+  color: #777;
 }
 
 .flyingehus-empty-calendar {

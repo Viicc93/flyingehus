@@ -1,12 +1,13 @@
-$backround-color: #FEF6AF;
-
+$background-color: #FDF5B7;
+$transparent-background-color: rgba(253, 245, 183, 0.5);
 /*
 * TEXT
 */
 //color
-$color: #000080;
+$color: #00006A;
+$heading-color: #00006A;
 $link-color: #900;
-$link-hover: #83B;
+$link-hover: #00006A;
 
 // size
 $heading-xs: 16px;
@@ -30,6 +31,6 @@ $space-lg: 50px;
 *  BREAKPOINTS
 */
 $screen-xs: 460px;
-$screen-sm: 710px;
+$screen-sm: 768px;
 $screen-md: 990px;
 $screen-lg: 1280px;

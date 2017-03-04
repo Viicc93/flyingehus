@@ -2,8 +2,9 @@
 <html>
 
 <head>
-  <?php wp_head(); ?>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -29,9 +30,10 @@
                 wp_nav_menu( array(
                     'menu' => 'primarynav',
                     'menu_id'=>'primarynav',
+                    'theme_location' => 'primarymenu',
                     'depth' => 2,
                     'container' => false,
-                    'menu_class' => 'nav',
+                    'menu_class' => 'nav navbar-nav',
                     'walker' => new wp_bootstrap_navwalker())
                 );
             ?>

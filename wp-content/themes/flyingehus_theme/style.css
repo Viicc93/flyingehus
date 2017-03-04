@@ -17,47 +17,117 @@ Text Domain: flyingehus
 *  BREAKPOINTS
 */
 p {
+  color: #00006A;
   font-size: 14px;
-  font-family: 'Roboto', sans-serif; }
+  font-family: Arial, Helvetica, sans-serif !important; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-size: 18px; }
+  color: #00006A;
+  font-family: Arial, Helvetica, sans-serif !important; }
 
 a {
   color: #900;
   text-decoration: none; }
   a:hover {
-    color: #83B;
+    color: #00006A;
     text-decoration: none; }
+
+h1 {
+  font-size: 18px; }
+
+h2 {
+  font-size: 16px; }
+
+h3 {
+  font-size: 14px; }
+
+h4 {
+  font-size: 12px; }
+
+h5 {
+  font-size: 11px; }
+
+h6 {
+  font-size: 10px; }
 
 @media all and (min-width: 460px) {
   p {
-    font-size: 15px; }
-  h1, h2, h3, h4, h5, h6 {
-    font-size: 20px; } }
+    font-size: 15px; } }
 
-@media all and (min-width: 710px) {
+@media all and (min-width: 768px) {
   p {
     font-size: 16px; }
-  h1, h2, h3, h4, h5, h6 {
-    font-size: 26px; } }
+  h1 {
+    font-size: 24px; }
+  h2 {
+    font-size: 20px; }
+  h3 {
+    font-size: 18px; }
+  h4 {
+    font-size: 16px; }
+  h5 {
+    font-size: 14px; }
+  h6 {
+    font-size: 12px; } }
+
+@media all and (min-width: 990px) {
+  h1 {
+    font-size: 36px; }
+  h2 {
+    font-size: 26px; }
+  h3 {
+    font-size: 22px; }
+  h4 {
+    font-size: 20px; }
+  h5 {
+    font-size: 18px; }
+  h6 {
+    font-size: 16px; } }
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: Arial !important;
-  color: #000080; }
+  box-sizing: border-box; }
 
 body {
-  background: #FEF6AF; }
+  background: #FDF5B7; }
 
 .flyingehus-container {
   max-width: 1280px;
   margin: auto;
   padding: 5px; }
 
-@media all and (min-width: 710px) {
+.flyingehus-button {
+  padding: 5px 20px;
+  margin-bottom: 20px;
+  background-color: #FFF8BC;
+  border: 1px solid #00006A;
+  border-radius: 4px; }
+  .flyingehus-button .fa-arrow-left {
+    color: #00006A; }
+
+#searchform {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  #searchform #searchsubmit {
+    background: #00006A;
+    color: #FFFBD4;
+    border: none;
+    padding: 5px;
+    margin-left: -7px;
+    border-radius: 0 4px 4px 0;
+    width: 20%; }
+  #searchform #s {
+    background: #FFFBD4;
+    height: 30px;
+    width: 80%;
+    padding-left: 5px;
+    border: 1px solid #00006A;
+    border-radius: 4px 0 0 4px; }
+  #searchform .screen-reader-text {
+    display: none; }
+
+@media all and (min-width: 768px) {
   .flyingehus-container {
     padding: 20px; } }
 
@@ -78,25 +148,116 @@ body {
     background-color: #000; }
 
 .navbar-default .navbar-collapse {
-  border-top: none; }
+  border-color: #000;
+  border-width: 2px; }
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
+  background-color: transparent; }
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover {
+  background-color: transparent; }
+
+.navbar-default .navbar-nav > .dropdown > .dropdown-menu > li > a,
+.navbar-default .navbar-nav > .dropdown > .dropdown-menu > li > a:focus,
+.navbar-default .navbar-nav > .dropdown > .dropdown-menu > li > a:hover {
+  background-color: transparent; }
 
 #primarynav li a {
   color: #000;
-  font-weight: bold;
-  padding: 0;
+  padding: 0 20px 0 0;
   text-transform: uppercase;
-  font-size: 14px; }
+  font-size: 10px; }
+  #primarynav li a:hover {
+    color: #900; }
 
 #logo {
   width: 150px; }
   #logo img {
     width: 100%; }
 
-@media all and (min-width: 710px) {
+.navbar-header {
+  margin-top: -50px; }
+
+@media all and (min-width: 460px) {
+  #primarynav li a {
+    font-size: 14px; } }
+
+@media all and (min-width: 768px) {
   #primarynav {
-    margin-top: 20px; }
+    margin-top: 10px; }
   #logo {
-    width: 200px; } }
+    width: 200px; }
+  .dropdown-menu {
+    padding-left: 5px;
+    background-color: #FFF8BC; }
+  .navbar-collapse {
+    padding-right: 0;
+    padding-left: 0; } }
+
+@media all and (min-width: 1280px) {
+  #primarynav li a {
+    font-size: 16px; } }
+
+@media all and (max-width: 767px) {
+  #primarynav li.menu-item li.menu-item a {
+    color: #777; }
+  li.menu-item a {
+    padding: 5px; }
+  li.menu-item .caret {
+    display: none; }
+  .dropdown-menu {
+    position: static;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    float: none;
+    min-width: 160px;
+    padding: 5px 10px;
+    margin: 2px 0 0;
+    font-size: 10px;
+    text-align: left;
+    list-style: none;
+    background-color: #FFF8BC;
+    border: none;
+    border: none;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none; } }
+
+.start-extra-content {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+@media all and (max-width: 990px) {
+  #news-sidebar, .posts {
+    width: 100%; }
+  .flexbox {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap; }
+  .flexpos-2 {
+    order: 2;
+    -webkit-order: 2;
+    -moz-order: 2;
+    -ms-order: 2;
+    width: 100%;
+    float: none; }
+  .flexpos-1 {
+    order: 1;
+    -webkit-order: 1;
+    -moz-order: 1;
+    -ms-order: 1; } }
 
 .post {
   border-bottom: 1px dotted rgba(0, 0, 128, 0.3);
@@ -107,12 +268,11 @@ body {
   padding: 20px 0; }
 
 .post-title {
-  font-size: 16px;
   font-weight: bold; }
   .post-title a {
-    color: #000080; }
+    color: #00006A; }
     .post-title a:hover {
-      color: #83B; }
+      color: #900; }
 
 .content p {
   font-size: 14px; }
@@ -132,8 +292,7 @@ body {
 .single-img {
   margin: auto; }
   .single-img.horizontal-image img {
-    width: 100%;
-    max-width: 640px; }
+    width: 100%; }
   .single-img.vertical-image img {
     width: 100%;
     max-width: 280px; }
@@ -156,6 +315,20 @@ body {
   padding-bottom: 5px;
   padding-right: 5px; }
 
+.image-text, .wp-caption-text {
+  font-style: italic;
+  font-weight: 100;
+  font-size: 10px;
+  padding-top: 5px; }
+
+@media all and (min-width: 460px) {
+  .image-text, .wp-caption-text {
+    font-size: 12px; } }
+
+@media all and (min-width: 990px) {
+  .image-text, .wp-caption-text {
+    font-size: 14px; } }
+
 @media all and (min-width: 560px) {
   .post {
     overflow: hidden;
@@ -171,21 +344,13 @@ body {
       float: left;
       padding-left: 10px; } }
 
-@media all and (min-width: 710px) {
-  .post-title {
-    font-size: 20px; } }
-
-@media all and (min-width: 990px) {
-  .full-post .post-title {
-    font-size: 26px; } }
-
 .sidebar ul li {
   list-style-type: none; }
 
 .widget-title {
   font-size: 18px; }
 
-@media all and (min-width: 710px) {
+@media all and (min-width: 768px) {
   .widget-title {
     font-size: 20px; } }
 
@@ -195,26 +360,22 @@ body {
   border: 1px solid rgba(0, 0, 80, 0.2);
   border-radius: 3px;
   padding-bottom: 20px; }
-
-.flyingehus-bokning {
-  padding-bottom: 20px; }
-
-.flyingehus-calendar .calendar-title {
-  text-align: center; }
+  .flyingehus-calendar .calendar-title {
+    text-align: center; }
 
 .fhc-label {
   text-align: center;
   border-bottom: 2px solid #000080;
   color: #000080;
-  height: 20px; }
+  height: 24px; }
 
 h5.fhc-month {
   color: #000080;
-  font-size: 17px; }
+  font-size: 20px;
+  font-weight: bold; }
 
 .fhc-header {
   display: inline-block;
-  height: 40px;
   width: 100%; }
 
 .fhc-content {
@@ -227,47 +388,59 @@ h5.fhc-month {
 .fhc-date {
   float: left;
   padding-right: 5px;
-  width: 43px; }
+  width: 45px; }
 
 .fhc-date h5 {
-  color: #000080;
-  font-weight: bold; }
+  color: #900;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 0; }
 
-.fhc-title {
-  padding: 0; }
+.fhc-title h5 {
+  color: #900;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  margin-left: 45px; }
 
 .fhc-title h5 a {
-  color: #000080; }
-
-.fhc-title h5 a:hover {
-  color: #7D0000; }
+  color: #900; }
+  .fhc-title h5 a:hover {
+    color: #7D0000; }
 
 .fhc-description {
   color: #000080; }
+  .fhc-description p {
+    margin-left: 42px;
+    margin-top: 2px;
+    margin-bottom: 2px; }
 
-.fhc-description p {
-  margin-left: 42px;
-  margin-top: 2px;
-  margin-bottom: 3px; }
-
-.fhc-place {
+.fhc-place a, .fhc-place p {
+  color: #7B50A7;
   padding: 1px 5px 1px 1px;
-  font-size: 12px; }
+  font-size: 12px;
+  font-style: italic; }
 
 .fhc-place a {
-  color: #000080;
-  margin-left: 44px; }
+  text-decoration: underline; }
 
 .fhc-place a:hover {
   color: #7D0000; }
 
 .fhc-place .fa.fa-map-marker {
-  padding-right: 4px; }
+  color: #7B50A7;
+  padding-right: 5px; }
+
+.fa.fa-clock-o {
+  padding-right: 5px;
+  color: #777; }
 
 .flyingehus-empty-calendar {
   padding-left: 10px; }
 
 .flyingehus-footer {
+  margin-top: 50px;
   width: 100%; }
 
 .copyright {

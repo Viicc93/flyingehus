@@ -5,5 +5,6 @@
   <p> &copy; Copyright Flyingehus 2017</p>
 </div>
 </div><!--END container-->
+<?php wp_footer(); ?>
 </body>
 </html>
