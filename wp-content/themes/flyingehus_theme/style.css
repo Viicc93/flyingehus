@@ -127,6 +127,9 @@ body {
   #searchform .screen-reader-text {
     display: none; }
 
+.vc_figure-caption {
+  color: #00006A; }
+
 @media all and (min-width: 768px) {
   .flyingehus-container {
     padding: 20px; } }
@@ -350,12 +353,22 @@ body {
 .widget-title {
   font-size: 18px; }
 
+a .img-link {
+  width: 90%;
+  margin: 5px; }
+
+.img-link:hover {
+  -ms-transform: scale(1.1, 1.1);
+  /* IE 9 */
+  -webkit-transform: scale(1.1, 1.1);
+  /* Safari */
+  transform: scale(1.05, 1.05); }
+
 @media all and (min-width: 768px) {
   .widget-title {
     font-size: 20px; } }
 
 .flyingehus-calendar {
-  margin-top: 20px;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 80, 0.2);
   border-radius: 3px;

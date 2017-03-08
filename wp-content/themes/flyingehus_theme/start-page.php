@@ -1,21 +1,11 @@
 <?php /* Template Name: Start Page */ ?>
 <?php get_header(); ?>
+
 <?php if ( have_posts() ) : ?>
   <?php	while ( have_posts() ) : the_post(); ?>
       <div class="start-extra-content e-content"><?php the_content(); ?></div>
   <?php endwhile; ?>
 <?php endif; ?>
-<?php $latestPost = new WP_Query( array('post_type' => 'post','posts_per_page' => 1)); ?>
-<?php $latestPostID; ?>
-<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
-<?php $posts = new WP_Query( array('post_type' => 'post', 'paged' => $paged, 'posts_per_page' => 5)); ?>
-<?php
-  if ($latestPost->have_posts()):
-    while ( $latestPost->have_posts() ) : $latestPost->the_post();
-    $latestPostID =  get_the_ID();
-    endwhile;
-  endif;
-?>
 <div class="">
 	<aside id="main-sidebar" class="sidebar col-xs-12 col-md-4">
 		<?php if ( is_active_sidebar( 'main-sidebar' ) ) : ?>
@@ -24,6 +14,18 @@
 			</ul>
 		<?php endif; ?>
 	</aside>
+
+  <?php $latestPost = new WP_Query( array('post_type' => 'post', 'posts_per_page' => 1)); ?>
+  <?php $latestPostID; ?>
+  <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
+  <?php $posts = new WP_Query( array('post_type' => 'post', 'paged' => $paged, 'posts_per_page' => 6,)); ?>
+  <?php
+    if ($latestPost->have_posts()):
+      while ( $latestPost->have_posts() ) : $latestPost->the_post();
+      $latestPostID =  get_the_ID();
+      endwhile;
+    endif;
+  ?>
 
 	<section class="posts col-xs-12 col-md-8">
 	<?php if ( $posts->have_posts() ) : ?>
@@ -74,16 +76,17 @@
 			<?php endif ?>
 
 	<?php endwhile; ?>
-    <?php if ($posts->max_num_pages > 1) {  ?>
-      <nav class="prev-next-posts">
-        <div class="prev-posts-link">
-          <?php echo get_next_posts_link( __('Older Entries &raquo;', 'fso-eventing'), $posts->max_num_pages ); ?>
-        </div>
-        <div class="next-posts-link">
-          <?php echo get_previous_posts_link( __('&laquo; Newer Entries', 'fso-eventing') ); ?>
-        </div>
-      </nav>
-    <?php } ?>
+
+  			<?php if ($posts->max_num_pages > 1) {  ?>
+  			  <nav class="prev-next-posts">
+  			    <div class="prev-posts-link">
+  			      <?php echo get_next_posts_link( __('Older Entries &raquo;', 'flyingehus'), $posts->max_num_pages ); ?>
+  			    </div>
+  			    <div class="next-posts-link">
+  			      <?php echo get_previous_posts_link( __('&laquo; Newer Entries', 'flyingehus') ); ?>
+  			    </div>
+  			  </nav>
+  			<?php } ?>
 		<?php else : ?>
 			<div class="not-found">
 				<h5><?php _e( 'Ouups, nothing found here!' , 'flyingehus'); ?></h5>

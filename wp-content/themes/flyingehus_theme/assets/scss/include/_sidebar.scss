@@ -8,6 +8,15 @@
 .widget-title {
   font-size: $heading-sm;
 }
+a .img-link{
+	width: 90%;
+	margin: 5px;
+}
+.img-link:hover {
+    -ms-transform: scale(1.1,1.1); /* IE 9 */
+    -webkit-transform: scale(1.1,1.1); /* Safari */
+    transform: scale(1.05,1.05);
+}
 @media all and (min-width: $screen-sm) {
   .widget-title {
     font-size: $heading-md;
