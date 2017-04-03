@@ -16,6 +16,7 @@
 
 			<button class="flyingehus-button" value="" onclick="history.back(-1)" /><span class="fa fa-arrow-left" aria-hidden="true"></span></button>
 				<article class="h-entry full-post">
+					<p class="post-date dt-published">Postad: <?php the_date(); ?></p>
 				<?php if (has_post_thumbnail()): ?>
 					<div class="single-img <?php echo  $image_size; ?>">
 						<img class="u-photo" src="<?php the_post_thumbnail_url(); ?>"></img>
@@ -23,13 +24,12 @@
 					</div>
 				<?php endif; ?>
 					<h1 class="p-name post-title"><?php the_title(); ?></h1>
-          <p class="post-date dt-published">Posted at: <?php the_date(); ?></p>
   				<div class="e-content"><?php the_content(); ?></div>
-					<span class="categories">Categories: <?php the_category(); ?></span>
+					<span class="categories">Kategorier: <?php the_category(); ?></span>
 				</article>
 		<?php endwhile; else: ?>
 				<div class="not-found">
-					<p><?php _e( 'No post was found here' , 'flyingehus'); ?></p>
+					<p><?php _e( 'Hoppsan! Här var det tomt!' , 'flyingehus'); ?></p>
 				</div>
 	<?php endif; ?>
 </div>
