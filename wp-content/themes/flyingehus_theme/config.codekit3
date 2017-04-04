@@ -9,6 +9,12 @@
 	],
 "creatorBuild": "25568",
 "files": {
+	"\/another-page.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/another-page.php",
+		"oF": 0
+		},
 	"\/archive-flyingehus-calendar.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -860,12 +866,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/single.php",
-		"oF": 0
-		},
-	"\/start-page.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/start-page.php",
 		"oF": 0
 		},
 	"\/style.css": {

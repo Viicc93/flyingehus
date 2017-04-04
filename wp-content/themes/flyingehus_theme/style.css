@@ -232,6 +232,9 @@ body {
     -webkit-box-shadow: none;
     box-shadow: none; } }
 
+.prev-next-posts .prev-posts-link {
+  float: right; }
+
 .start-extra-content {
   padding-left: 15px;
   padding-right: 15px; }

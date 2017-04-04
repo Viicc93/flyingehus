@@ -46,8 +46,8 @@ function flyingehus_widgets_init() {
   ) );
 
   register_sidebar( array(
-    'name' => __( 'News Sidebar', 'flyingehus' ),
-    'id' => 'news-sidebar',
+    'name' => __( 'Sidebar', 'flyingehus' ),
+    'id' => 'sidebar',
     'description' => __( 'Widget area.', 'flyingehus' ),
     'before_widget' => '<li id="%1$s" class="widget %2$s ">',
     'after_widget'  => '</li>',

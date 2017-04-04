@@ -1,4 +1,3 @@
-
 <?php get_header(); ?>
 <?php $latestPost = new WP_Query( array('post_type' => 'post', 'posts_per_page' => 1)); ?>
 <?php $latestPostID; ?>
@@ -13,8 +12,8 @@
   endif;
 ?>
 
-<div class="main-content">
-  <aside id="main-sidebar" class="sidebar col-xs-12 col-md-4">
+<div class="main-content flexbox">
+  <aside id="main-sidebar" class="sidebar flexpos-2 col-xs-12 col-md-4">
     <?php if ( is_active_sidebar( 'main-sidebar' ) ) : ?>
       <ul>
         <?php dynamic_sidebar( 'main-sidebar' ); ?>
@@ -23,7 +22,7 @@
   </aside>
 
 	<?php if ( have_posts() ) : ?>
-	<section class="posts col-xs-12 col-sm-12 col-md-8 col-lg-8">
+	<section class="posts flexpos-1 col-xs-12 col-sm-12 col-md-8 col-lg-8">
 			<?php	while ( have_posts() ) : the_post(); ?>
         <?php if (get_the_ID() === $latestPostID ): ?>
 
@@ -71,18 +70,17 @@
 
 <?php endif ?>
 			<?php endwhile; ?>
-
-			<?php if ($allPosts->max_num_pages > 1) {  ?>
+      <?php if ($allPosts->max_num_pages > 1) {  ?>
 			  <nav class="prev-next-posts">
-			    <div class="prev-posts-link">
-			      <?php echo get_next_posts_link( __('Tidigare Nyheter &raquo;'), $allPosts->max_num_pages ); ?>
-			    </div>
-			    <div class="next-posts-link">
-			      <?php echo get_previous_posts_link( __('&laquo; Senare Nyheter') ); ?>
-			    </div>
+			    <span class="next-posts-link">
+			      <?php echo get_previous_posts_link( __('&laquo; Senare inlägg') ); ?>
+			    </span>
+
+          <span class="prev-posts-link">
+            <?php echo get_next_posts_link( __('Tidigare inlägg &raquo;'), $allPosts->max_num_pages ); ?>
+          </span>
 			  </nav>
 			<?php } ?>
-
 		<?php else : ?>
 				<div class="not-found">
 					<h5><?php _e( 'Hoppsan! Här var det tomt!' , 'flyingehus' ); ?></h5>

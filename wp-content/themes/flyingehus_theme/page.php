@@ -7,7 +7,7 @@
 		</article>
 	<?php endwhile; else : ?>
 		<div class="not-found">
-			<p><?php _e( 'No page was found here' , 'flyingehus'); ?></p>
+			<p><?php _e( 'Hoppsan! Här var det tomt!' , 'flyingehus'); ?></p>
 		</div>
 <?php endif; ?>
 
