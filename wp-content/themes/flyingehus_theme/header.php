@@ -3,8 +3,10 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/favicon.png" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <?php wp_head(); ?>
+  <title>FLYINGEHUS<?php if(!is_home()) echo ' || ' . get_the_title(); ?></title>
 </head>
 
 <body <?php body_class(); ?>>

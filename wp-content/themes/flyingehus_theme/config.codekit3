@@ -632,6 +632,14 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/assets\/images\/favicon.png": {
+		"ft": 32768,
+		"iS": 18638,
+		"oA": 0,
+		"oAP": "\/assets\/images\/favicon.png",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/assets\/images\/logo_flyingehus.png": {
 		"ft": 32768,
 		"iS": 5572,

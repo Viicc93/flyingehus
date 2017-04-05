@@ -1,6 +1,6 @@
 p {
   color: $color;
-  font-size: $text-sm;
+  font-size: $text;
   font-family: Arial, Helvetica, sans-serif !important;
 }
 h1, h2, h3 ,h4, h5, h6 {
@@ -35,14 +35,14 @@ h6 {
 }
 @media all and (min-width: $screen-xs) {
   p {
-    font-size: $text-md;
+    font-size: $text;
   }
 
 }
 
 @media all and (min-width: $screen-sm) {
   p {
-    font-size: $text-lg;
+    font-size: $text;
   }
   h1 {
       font-size: 24px;
