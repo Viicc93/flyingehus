@@ -3,7 +3,7 @@
 function calendar_init() {
   $args = array(
     'label'=> 'Kalender',
-    'exclude_from_search' => true, 
+    'exclude_from_search' => true,
     'public' => true,
     'show_ui' => true,
     'capability_type' => 'post',
@@ -146,16 +146,18 @@ add_action( 'init', 'create_calendar_tax' );
     }
 
     function kArgs($type, $month){
-            $args = array('post_type' => 'flyingehus-calendar',
+            $args = array(
+            'post_type' => 'flyingehus-calendar',
             'tax_query' => array(
               array(
                 'taxonomy' => 'caltypes',
                 'field' => 'slug', //can be set to ID
                 'terms' => $type //if field is ID you can reference by cat/term number
               )
-            ), 'meta_key'=>'k_start',  'orderby' => 'meta_key', 'order' => 'ASC','meta_query' => array(array('key'  => 'k_month','value' => $month, 'compare'   => 'LIKE')));
+            ),
+            'meta_key'=>'k_start', 'orderby' => 'meta_value_num', 'order' => 'ASC','meta_query' => array(array('key'  => 'k_month','value' => $month, 'compare'   => 'LIKE')));
             return $args;
-        }
+  }
   add_shortcode( 'kalender', 'build_calendar' );
 
 
